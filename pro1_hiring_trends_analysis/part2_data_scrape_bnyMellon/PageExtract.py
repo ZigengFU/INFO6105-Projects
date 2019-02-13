@@ -4,8 +4,8 @@ import time
 
 def getURL(pageNum):
     url = 'https://jobs.bnymellon.com/jobs?page='
-    urlback = '&categories=Wealth%20Management'
-    urls = []
+    urlback = '&categories=Global%20Markets'
+    urls = 
     for i in range(pageNum):
         temp = url+(str)(i+1)+urlback
         urls.append(temp)
@@ -34,11 +34,11 @@ def fillPositionList(html):
 
 def printCsv(sinfo):
     df = pd.DataFrame(sinfo)
-    df.to_csv('/Users/jinyimu/Documents/INFO6105/WMJob.csv', sep=',', header=True, index=True) # set output path
+    df.to_csv('/Users/jinyimu/Documents/INFO6105/GLJob.csv', sep=',', header=True, index=True) # set output path
 
 def main():
-    sinfo = []
-    urls = getURL(3) # set the number of page you want
+    sinfo = 
+    urls = getURL(2) # set the number of page you want
     i = 1
     for url in urls:
         html = getHTMLText(url)

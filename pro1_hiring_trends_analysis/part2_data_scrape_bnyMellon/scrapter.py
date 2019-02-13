@@ -10,21 +10,21 @@ jobList = jobResults.findAll('a')
 print(jobList)
 '''
 
-csvFile =open("WMJob.csv","r")
+csvFile =open("URL.csv","r")
 reader = csv.reader(csvFile)
-url = []
+url = 
 for item in reader:
     if reader.line_num == 1:
         continue
-    url.append(item[1])
+    url.append(item1)
 
 csvFile.close()
-#print(url[0])
+#print(url0)
 # for single page
 
-data = [0,'0','0','0']
+data = 0,'0','0','0'
 
-csvFile1  = open("WMdata.csv","w")
+csvFile1  = open("BNYJobData.csv","w")
 writer = csv.writer(csvFile1)
 i=0
 for page in url:
@@ -39,13 +39,13 @@ for page in url:
     title = jobInfoContainer.find('h1',class_="job-title").text
     location = jobInfoContainer.find('div',class_="job-location job-categories").text
     jobDescription = jobInfoContainer.find('div',class_="jibe-job-description job-description").text
-    data[0] = i
-    data[1] = title
-    data[2] = location
-    data[3] = jobDescription
+    data0 = i
+    data1 = title
+    data2 = location
+    data3 = jobDescription
     writer.writerow(data)
     i = i+1
-    print("write page")
+    print("write page",i)
 csvFile1.close()
     #print(jobDescription)
     #print("Next Job")
