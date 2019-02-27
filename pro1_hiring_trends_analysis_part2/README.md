@@ -9,4 +9,4 @@ https://hub.docker.com/r/prospace/data_science/tags
 Run the program by the following command:
 docker run prospace/data_science
 
-3）Please find the README.md file in the /Data folder to see the dataset usage.
+3) Please find the README.md file in the /Data folder to see the dataset usage.
