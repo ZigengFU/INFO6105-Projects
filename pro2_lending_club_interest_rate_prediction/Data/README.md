@@ -1,4 +1,15 @@
 # Data File Instructions
-1. hashFinishData.csv: the cleaned dataset containing the valid fields for feature engineering and model training. The original dataset is 'Lending Club Loan Data' from Kaggle (url: https://www.kaggle.com/wendykan/lending-club-loan-data).
 
-2. featureEng_manual.xlsx: manully selected fields which may influence the interest rate, including two classifications: loan statistics and personal statistics.
+Datasets_Manual Features (cleaned and pre-processed data using manually selected features): 
+1. manual_features.xlsx: manully selected fields which may influence the interest rate, including two classifications: loan statistics and personal statistics.
+
+2. loan.csv: original data by extracting the manual feature columns from Kaggle dataset (url: https://www.kaggle.com/wendykan/lending-club-loan-data).
+
+3. loan_clean.csv: the cleaned dataset after removing the invalid and meaningless records.
+
+4. loan_processed.csv: the processed dataset after text data convertion to realize the quantization.
+
+
+
+Datasets_FeatureTools (cleaned and pre-processed data using features selected by FeatureTools): 
+
