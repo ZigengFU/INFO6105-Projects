@@ -1,4 +1,4 @@
-# Data File Instructions
+# Data Files Instructions
 
 Datasets_Manual Features (cleaned and pre-processed data using manually selected features): 
 1. manual_features.xlsx: manully selected fields which may influence the interest rate, including two classifications: loan statistics and personal statistics.
@@ -13,3 +13,8 @@ Datasets_Manual Features (cleaned and pre-processed data using manually selected
 
 Datasets_FeatureTools (cleaned and pre-processed data using features selected by FeatureTools): 
 
+1. loan_tmp.csv: original data containing feature columns extracted by FeatureTools.
+
+2. autoFeature_clean.csv: the cleaned autoFeature fields dataset after removing the invalid and meaningless records.
+
+3. autoFeature_processed.csv: the processed autoFeature fields dataset after text data convertion to realize the quantization.
