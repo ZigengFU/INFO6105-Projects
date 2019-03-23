@@ -11,13 +11,14 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import Normalizer
 from sklearn.model_selection import cross_val_predict
 
-loan_data = pd.read_csv('loadHashFinishData.csv',error_bad_lines=False,encoding = "utf-8")
+loan_data = pd.read_csv('autoFeatureloadHashFinishData.csv',error_bad_lines=False,encoding = "utf-8")
 
 data_array = np.array(loan_data)
 
 #print(data_array[1])
 
-x = data_array[:, 1:data_array.shape[1]]
+x = data_array[:, 1:data_array.shape[1]-1]
+print(x)
 selection = [v for v in range(len(x)) if v % 5 != 0]
 selection2 = [v for v in range(len(x)) if v % 5 == 0]
 x2 = x[selection, :]
@@ -36,13 +37,17 @@ lr.normalize = True
 lr.fit(x2, y2)
 
 y4 = lr.predict(x3)
+
+pd.DataFrame(x3).to_csv('test_cases1.csv')
+pd.DataFrame(y3).to_csv('test_cases2.csv')
+pd.DataFrame(y4).to_csv('test_cases3.csv')
 #print(y4)
 y5 = lr.predict(x2)
 #print(u'模型的平均准确率（训练集）为：%s' % lr.score(x2, y2));
 #print(u'模型的平均准确率（测试集）为：%s' % lr.score(x3, y3));
-#print(lr.coef_)
-#print(lr.intercept_)
-#print(lr.get_params(deep=True))
+print(lr.coef_)
+print(lr.intercept_)
+print(lr.get_params(deep=True))
 
 n= len(y3)
 n2= len(y2)
@@ -61,7 +66,7 @@ print(mape)
 norm1 = Normalizer(norm = 'l1')
 data_array = norm1.fit_transform(data_array)
 
-x = data_array[:, 1:data_array.shape[1]]
+x = data_array[:, 1:data_array.shape[1]-1]
 selection = [v for v in range(len(x)) if v % 5 != 0]
 selection2 = [v for v in range(len(x)) if v % 5 == 0]
 x2 = x[selection, :]
@@ -97,7 +102,7 @@ print(mape)
 norm1 = Normalizer(norm = 'l2')
 data_array = norm1.fit_transform(data_array)
 
-x = data_array[:, 1:data_array.shape[1]]
+x = data_array[:, 1:data_array.shape[1]-1]
 selection = [v for v in range(len(x)) if v % 5 != 0]
 selection2 = [v for v in range(len(x)) if v % 5 == 0]
 selectionAll = [v for v in range(len(x))]
