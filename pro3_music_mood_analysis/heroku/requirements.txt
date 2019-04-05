@@ -1,0 +1,10 @@
+flask
+gunicorn
+wtforms
+google-cloud
+google-cloud-translate
+keras
+sklearn
+pandas
+numpy
+tensorflow
