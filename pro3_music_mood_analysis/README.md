@@ -3,7 +3,7 @@
 1) Project Introduction
 In this project, we designed and developed a Chinese music mood classification App. Using this App, people can input Chinese lyrics and then predict the mood of the song (which is happy or sad) and the probability of the prediction.
 
-2) Main steps and tools
+2) Main steps and tools are: 
 Chinese lyric translation using Google Translate API;
 Text Classification model using Tensorflow and Keras;
 App development using Flask framework;
