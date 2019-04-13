@@ -15,7 +15,8 @@ Value           | Meaning
 1                 | Team 1 lose
 2                 | Team 1 win
 
-* season
+season
+
 First Header  | Second Header
 ------------- | -------------
 Content Cell  | Content Cell
