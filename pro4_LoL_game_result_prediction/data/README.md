@@ -8,6 +8,7 @@ The data was scraped from the following urls.
 
 ## Special Fields Instruction
 1. lolTeamData.csv:
+
 result
 
 Value  | Meaning
