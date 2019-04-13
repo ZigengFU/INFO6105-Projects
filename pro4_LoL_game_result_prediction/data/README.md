@@ -8,14 +8,14 @@ The data was scraped from the following urls.
 
 ## Special Fields Instruction
 1. lolTeamData.csv:
-* result
+result
 Value           | Meaning
 ------------- | -------------
 0                 | Two teams even
 1                 | Team 1 lose
 2                 | Team 1 win
 
-* season
+season
 Value           | Meaning
 ------------- | -------------
 1                 | 2019 Spring
