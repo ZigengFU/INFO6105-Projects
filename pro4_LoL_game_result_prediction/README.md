@@ -9,4 +9,4 @@ In this project, we will build a prediction model using MLP (Multi-Layer Percept
 
 ## Proposal Link
 Please view the proposal of the project by the following link:
-https://docs.google.com/document/d/10prnfsaBoCaZXKREt6pIizqJujCCcLkeOaHM0BdjBGw/edit?usp=sharing
+https://codelabs-preview.appspot.com/?file_id=10prnfsaBoCaZXKREt6pIizqJujCCcLkeOaHM0BdjBGw#0
