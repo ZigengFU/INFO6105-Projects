@@ -11,7 +11,7 @@ App deployment using Heroku;
 Model performance evaluation using confusion matrix.
 
 3) Please access the claat report by the following link:
-https://docs.google.com/document/d/1UQlHwWT_0uEmYVj_D7ulWvFiVdK0-y1GbDgq1oufzsM/edit?usp=sharing
+https://codelabs-preview.appspot.com/?file_id=1UQlHwWT_0uEmYVj_D7ulWvFiVdK0-y1GbDgq1oufzsM#0
 Within the report, there are instructions about project configuration and launching.
 
 4) Please try to use the online App by the following link:
