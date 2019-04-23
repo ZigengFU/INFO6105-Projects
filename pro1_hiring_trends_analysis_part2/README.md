@@ -1,7 +1,7 @@
 # INFO6105-Assignment2-Fintech Hiring Trends Analysis (Continued)
 
 1) Please access the claat report by clicking the link below:
-https://docs.google.com/document/d/1mI2ATyKHXyLkZwq-8-KVx3s24uA8C9gKtrzXx98cZUk/edit?usp=sharing
+https://codelabs-preview.appspot.com/?file_id=1mI2ATyKHXyLkZwq-8-KVx3s24uA8C9gKtrzXx98cZUk#0
 or you can view the pdf version report in the /Report folder.
 
 2) Please find the dockernized file in the dockerhub by the link below:
