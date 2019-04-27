@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- Site Metas -->
+<title>Game Info</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Site Icons -->
+<link rel="shortcut icon" href="" type="image/x-icon" />
+<link rel="apple-touch-icon" href="">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<!-- Site CSS -->
+<link rel="stylesheet" href="../static/style.css">
+<!-- Colors CSS -->
+<!--<link rel="stylesheet" href="static/css/colors.css">-->
+<!-- ALL VERSION CSS -->
+<!--<link rel="stylesheet" href="static/css/versions.css">-->
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="../static/css/responsive.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="../static/css/custom.css">
+<!-- font family -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<!-- end font family -->
+<link rel="stylesheet" href="../static/css/3dslider.css" />
+<!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<script src="../static/js/3dslider.js"></script>
+
+<script>
+    function onTopClick() {
+        document.getElementById("news").scrollIntoView();
+    }
+</script>
+<script>
+    window.onload=function(){
+        $("#preloader").hide();
+    }
+</script>
+
+</head>
+<body class="game_info" data-spy="scroll" data-target=".header">
+<!-- LOADER -->
+<div id="preloader">
+    <img class="preloader" src="static/images/loading-img.gif" alt="">
+</div>
+<!-- END LOADER -->
+<section id="top">
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="full">
+                            <div class="logo">
+                                <a href="/team.html"><img src="../static/images/logo.png" alt="#" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="right_top_section">
+                            <!-- social icon -->
+                            <ul class="social-icons pull-left">
+                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            </ul>
+                            <!-- end social icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="inner-page-banner">
+        <div class="container">
+        </div>
+    </div>
+    <div class="inner-information-text">
+        <div class="container">
+            <h3>Prediction Result</h3>
+            <ul class="breadcrumb">
+                <li><a href="home.html">Home</a></li>
+                <li class="active">Prediction Result</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="contant" class="contant">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4 col-xs-12">
+                </aside>
+                </br></br>
+                <aside class="left-bar">
+                    {% if prediction >= 0.5 %}
+                        <div class="feature-matchs">
+                            <img src="../static/images/win.gif" alt="">
+                        </div>
+                    {% else %}
+                        <div class="feature-matchs">
+                            <img src="../static/images/lose.gif" alt="">
+                        </div>
+                    {% endif %}
+                </aside>
+            </div>
+            <div id="predict_form" class="col-lg-8 col-sm-8 col-xs-12">
+                <div style="padding-left: 20%; padding-right: 20%">
+                    <h1 style="text-align: center;">Game Result Prediction</h1>
+                    <div class="contact-us">
+                        {% from "_formhelpers.html" import render_field %}
+                        <form action="/" class="comments-form">
+                            <ul>
+                                <h2 style="font-weight: bold"><span style="color: #b94a48">{{ team1 }} </span>  VS  <span style="color: #333399"> {{ team2 }}</span>:</h2>
+                                {% if prediction >= 0.5 %}
+                                    <h1><span style="color: #b94a48">{{ team1 }} </span>Win!!!</h1>
+                                    </br>
+                                    <h2 style="font-weight: bold">Probability:</h2>
+                                    <h1>{{ probability }}%</h1>
+                                {% else %}
+                                    <h1><span style="color: #b94a48">{{ team1 }} </span>Lose...</h1>
+                                    </br>
+                                    <h2 style="font-weight: bold">Probability:</h2>
+                                    <h1>{{ 100-probability }}%</h1>
+                                {% endif %}
+                                </br>
+                                </br>
+                                <li><input class="thbg-color btn btn-primary btn-lg" type="submit" value="Predict Again"></li>
+                            </ul>
+                            <div class="hidden-me" id="contact_form_responce">
+                                <p></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="matchs-info">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="row">
+            <div class="full">
+                <div class="matchs-vs">
+                    <div class="vs-team">
+                        <div class="team-btw-match">
+                            <ul>
+                                <li>
+                                    <img src="../static/images/team_IG.png" style = "height: 98px; width: 98px" alt="">
+                                    <span>iG</span>
+                                </li>
+                                <li class="vs"><span>vs</span></li>
+                                <li>
+                                    <img src="../static/images/team_BLG.png" style = "height: 98px; width: 98px" alt="">
+                                    <span>BLG</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="row">
+            <div class="full">
+                <div class="right-match-time">
+                    <h2>Next Game</h2>
+                    <ul id="countdown-1" class="countdown">
+                        <li><span class="days">10 </span>Day </li>
+                        <li><span class="hours">5 </span>Hours </li>
+                        <li><span class="minutes">25 </span>Minutes </li>
+                        <li><span class="seconds">10 </span>Seconds </li>
+                    </ul>
+                    <span>04/27/2019 /19:00pm</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="full">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="#"><img src="../static/images/footer-logo.png" alt="#" /></a>
+                        </div>
+                        <p>Most of our events have hard and easy route choices as we are always keen to encourage new riders.</p>
+                        <ul class="social-icons style-4 pull-left">
+                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="full">
+                    <div class="footer-widget">
+                        <h3>Menu</h3>
+                        <ul class="footer-menu">
+                            <li><a href="/team.html">Our Team</a></li>
+                            <li><a href="https://github.com/Team6NEUinfo6105Spring2019/NEU_INFO6105_Spring2019_Projects">Our Github</a></li>
+                            <li><a href="">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="full">
+                    <div class="footer-widget">
+                        <h3>Contact us</h3>
+                        <ul class="address-list">
+                            <li><i class="fa fa-map-marker"></i> 360 Huntington Ave, Boston</li>
+                            <li><i class="fa fa-phone"></i> 123 456 7890</li>
+                            <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i> project.demo@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>Copyright © 2019 Distributed by <a href="" target="_blank">Team6</a></p>
+        </div>
+    </div>
+</footer>
+<!-- ALL JS FILES -->
+<script src="../static/js/all.js"></script>
+<!-- ALL PLUGINS -->
+<script src="../static/js/custom.js"></script>
+</body>
+</html>
